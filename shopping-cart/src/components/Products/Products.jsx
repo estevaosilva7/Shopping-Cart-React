@@ -3,6 +3,7 @@ import React, { useState, useEffect} from 'react';
 import './Products.css';
 import fetchProducts from '../../api/fetchProducts';
 import ProductCard from '../ProductCard/ProductCard';
+import Loading from '../Loading/Loading';
 
 function Products() {
 
@@ -11,18 +12,16 @@ function Products() {
   useEffect(() => {
     fetchProducts('iphone').then((reponse) => {
       setProducts(reponse);
-      
     });
   }, []);
   
   return (
-    <section className="products container">
-      
-      {
-        products.map((product) => <ProductCard key={product.id} data={product}/>)
-      }
-      
-    </section>
+    (Loading && <Loading /> ) || (
+      <section className="products container"> 
+        {products.map((product) => <ProductCard key={product.id} data={product}/>)}
+      </section>
+    )
+
   );
 }
 
