@@ -7,9 +7,9 @@
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     gap: 13px;
     padding-right: 13px;
-}
-
-.search__input {
+  }
+  
+  .search__input {
     padding: 13px;
     flex-grow: 1;
     border: none;
@@ -17,9 +17,9 @@
     font-size: 0.8rem;
     font-weight: 500px;
     border-right: 1px solid #ddd;
-}
-
-.search__button {
+  }
+  
+  .search__button {
     background: none;
     border: none;
     font-size: 1rem;
@@ -27,4 +27,4 @@
     align-items: center;
     justify-content: center;
     color: #333;
-}
+  }

@@ -4,17 +4,15 @@ import SearchBar from '../SearchBar/SearchBar';
 
 import './Header.css';
 
-
 function Header() {
   return (
-    <header className="header" > 
+    <header className="header">
       <div className="container">
-        <SearchBar/>
-        <CartButton/>
+        <SearchBar />
+        <CartButton />
       </div>
     </header>
   );
 }
 
 export default Header;
-
